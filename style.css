@@ -1,0 +1,266 @@
+:root {
+    font-size: 16px;
+    --background: #ebebeb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--background);
+    color: #4a4a4a;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+h1,
+h2
+{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300 !important;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100vh;
+
+    background-image: url('assets/slider/bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+}
+
+.floating {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.bag {
+    background-image: url('bag.svg');
+
+    animation-duration: 3s;
+}
+
+.armchair {
+    background-image: url('armchair.svg');
+
+    animation-duration: 5s;
+}
+
+.laptop {
+    background-image: url('laptop.svg');
+
+    animation-duration: 7s;
+}
+
+.phone {
+    background-image: url('phone.svg');
+
+    animation-duration: 6s;
+}
+
+.text {
+    z-index: 1;
+}
+
+.bag, .armchair, .laptop, .phone {
+    position: absolute;
+    z-index: 2;
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+
+    65% {
+        transform: translate(0, 15px);
+    }
+
+    to {
+        transform: translate(0, 0px);
+    }
+}
+
+.box div {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid rgb(73 97 202);
+}
+
+.box div:nth-child(1) {
+    top: 45%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 50%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 9rem);
+}
+
+.slider h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
+.slider h2 {
+    margin-top: -10px;
+}
+
+/* Small screens */
+@media only screen and (max-width: 700px) {
+    .slider {
+        margin-left: 0;
+    }
+
+    .slider .text {
+        height: 100%;
+    }
+
+    .bag {
+        width: 60px;
+        height: 70px;
+        margin: -12rem 0 0 calc(20vw - 3.75rem);
+    }
+
+    .armchair {
+        width: 100px;
+        height: 110px;
+        margin: 11rem 0 0 calc(23vw - 3.75rem);
+    }
+
+    .laptop {
+        width: 60px;
+        height: 70px;
+        margin: -9rem 0 0 calc(95vw - 3.75rem);
+    }
+
+    .phone {
+        width: 40px;
+        height: 50px;
+        margin: 12rem 0 0 calc(95vw - 3.75rem);
+    }
+}
+
+@media only screen and (max-width: 733px) {
+    .slider h1 {
+        font-size: 2rem;
+    }
+
+    .slider h2 {
+        margin-top: -5px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 700px) {
+    .bag {
+        width: 70px;
+        height: 80px;
+        margin: -15rem 0 0 calc(20vw - 3.75rem);
+    }
+
+    .armchair {
+        width: 190px;
+        height: 200px;
+        margin: 13rem 0 0 calc(20vw - 3.75rem);
+    }
+
+    .laptop {
+        width: 130px;
+        height: 140px;
+        margin: -18rem 0 0 calc(75vw - 3.75rem);
+    }
+
+    .phone {
+        width: 65px;
+        height: 75px;
+        margin: 20rem 0 0 calc(75vw - 3.75rem);
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1080px) {
+    .phone {
+        margin: 20rem 0 0 calc(80vw - 3.75rem);
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 480px){
+    .box, .bag, .armchair, .laptop, .phone {
+        display: none;
+    }
+}
