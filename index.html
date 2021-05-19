@@ -5,10 +5,9 @@
 <head>
     <title>Magapin</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="robots" content="nofollow">
-    <meta name="googlebot" content="noindex">
+    <meta name="description" content="Compra e venda de produtos novos e usados">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link href="style.css" rel="stylesheet" />
 </head>
@@ -16,11 +15,14 @@
 <body>
     <div class="slider">
         <div class="text">
+            <h3 id="countdown"></h3>
+            
             <div class="loader">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+            
             <p>comercial@magapin.com.br</p>
         </div>
 
@@ -40,4 +42,18 @@
         </div>
     </div>
 </body>
+
+<script>
+    let seconds = 3;
+    let timer = setInterval(function() {
+        document.getElementById("countdown").innerHTML = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(timer);
+            window.location.replace("https://www.instagram.com/magapin.marketplace");
+        }
+
+        seconds -= 1;
+    }, 1000);
+</script>
 </html>
