@@ -17,11 +17,6 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-p {
-    font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-    margin: 5px 0;
-}
-
 .slider {
     display: flex;
     position: relative;
@@ -168,7 +163,7 @@ p {
 .loader > div {
     width: 10px;
     height: 10px;
-    background-color: #bd89f1;
+    background-color: rgb(246 181 29);
     border-radius: 50%;
     margin: 3px;
 
@@ -186,7 +181,7 @@ p {
 @keyframes loader {
     to {
         transform: translate(0, -10px);
-        background-color : #000000;
+        background-color : #3b4854;
     }
 }
 
