@@ -14,9 +14,7 @@
 
 <body>
     <div class="slider">
-        <div class="text">
-            <h2 id="countdown"></h2>
-            
+        <div class="text">            
             <div class="loader">
                 <div></div>
                 <div></div>
@@ -42,18 +40,4 @@
         </div>
     </div>
 </body>
-
-<script>
-    let seconds = 3;
-    let timer = setInterval(function() {
-        document.getElementById("countdown").innerHTML = seconds;
-
-        if (seconds <= 0) {
-            clearInterval(timer);
-            window.location.replace("https://www.instagram.com/magapinoficial");
-        }
-
-        seconds -= 1;
-    }, 1000);
-</script>
 </html>
