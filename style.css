@@ -27,60 +27,8 @@ body {
     height: 100vh;
 }
 
-.floating {
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    animation-name: floating;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.bag {
-    background-image: url('bag.svg');
-
-    animation-duration: 3s;
-}
-
-.armchair {
-    background-image: url('armchair.svg');
-
-    animation-duration: 5s;
-}
-
-.laptop {
-    background-image: url('laptop.svg');
-
-    animation-duration: 7s;
-}
-
-.phone {
-    background-image: url('phone.svg');
-
-    animation-duration: 6s;
-}
-
 .text {
     z-index: 1;
-}
-
-.bag, .armchair, .laptop, .phone {
-    position: absolute;
-    z-index: 2;
-}
-
-@keyframes floating {
-    from {
-        transform: translate(0, 0px);
-    }
-
-    65% {
-        transform: translate(0, 15px);
-    }
-
-    to {
-        transform: translate(0, 0px);
-    }
 }
 
 .box div {
@@ -194,67 +142,10 @@ body {
     .slider .text {
         height: 100%;
     }
-
-    .bag {
-        width: 60px;
-        height: 70px;
-        margin: -12rem 0 0 calc(20vw - 3.75rem);
-    }
-
-    .armchair {
-        width: 100px;
-        height: 110px;
-        margin: 11rem 0 0 calc(23vw - 3.75rem);
-    }
-
-    .laptop {
-        width: 60px;
-        height: 70px;
-        margin: -9rem 0 0 calc(95vw - 3.75rem);
-    }
-
-    .phone {
-        width: 40px;
-        height: 50px;
-        margin: 12rem 0 0 calc(95vw - 3.75rem);
-    }
-}
-
-/* Large screens */
-@media only screen and (min-width: 700px) {
-    .bag {
-        width: 70px;
-        height: 80px;
-        margin: -15rem 0 0 calc(20vw - 3.75rem);
-    }
-
-    .armchair {
-        width: 190px;
-        height: 200px;
-        margin: 13rem 0 0 calc(20vw - 3.75rem);
-    }
-
-    .laptop {
-        width: 130px;
-        height: 140px;
-        margin: -18rem 0 0 calc(75vw - 3.75rem);
-    }
-
-    .phone {
-        width: 65px;
-        height: 75px;
-        margin: 20rem 0 0 calc(75vw - 3.75rem);
-    }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1080px) {
-    .phone {
-        margin: 20rem 0 0 calc(80vw - 3.75rem);
-    }
 }
 
 @media only screen and (orientation: landscape) and (max-height: 480px){
-    .box, .bag, .armchair, .laptop, .phone {
+    .box {
         display: none;
     }
 }
