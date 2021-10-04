@@ -646,6 +646,10 @@ footer a {
     padding: 10px;
 }
 
+#modal-content h3 {
+    color: white;
+}
+
 @keyframes modal {
     from {
         opacity: 0;
